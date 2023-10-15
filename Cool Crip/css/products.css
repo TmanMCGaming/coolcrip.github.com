@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap');
+
+:root{
+    --purple: #9900ff;
+    --light-blue: #404eed;
+    --black: #000000;
+    --light-color: #71acff;
+    --box-shadow: 0 .1rem 1rem #000;
+    --box-shadow2: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    --search-shadow: 0 .1rem 1rem #aeaeae;
+    --border: .2rem solid #b9b9b9;
+    --outline: .1rem solid #e8e8e8;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:  all 1s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+    background: #f0f0f0;
+}
+
+/*css code for banner*/
+section{
+    padding: 2rem 10%;
+}
+
+
+/*header css*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 6%;
+    background: transparent;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.header .logo i{
+    color: #ff0000;
+}
+
+.header .navbar a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 1.5rem;
+    color: #000000;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+.header .navbar a:hover{
+    color: #0000ff;
+    transition: .5s;
+}
+
+.header .navbar a::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #0000ab;
+    display: block;
+    margin: auto;
+    position: relative;
+    left:   0px;
+    bottom: -8px;
+    transition: .5s;
+}
+
+.header .navbar a:hover::after{
+    width: 100%;
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 2.3;
+    border-radius: .5rem;
+    background: #eee;
+    color: #000000;
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header .icons div:hover{
+    background: #404eed;
+    color: #ffffff;
+    transition: .5s;
+}
+
+#menu{
+    display: none;
+}
+
+.header .navbar.active{
+    right: 2rem;
+    transition: .3s linear;
+}
+
+.header .search-form{
+    border: 0px solid;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 4.5rem;
+    background: #fff;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--search-shadow)
+}
+
+.header .search-form.active{
+    right: 2rem;
+    transition: .3s linear;
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: #000000;
+    padding: 0 1.5rem;
+}
+
+.header .search-form label{
+    font-size: 2rem;
+    padding-right: 1.5rem;
+    color: #000000;
+    cursor: pointer;
+}
+
+.header .search-form label:hover{
+    color: #404eed;
+    transition: .5s;
+}
+/*header css*/
+
+
+/*banner css*/
+.banner{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    background: url(../image/banner.jpg) no-repeat;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 25rem;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner .content{
+    border: 0px solid;
+    text-align: center;
+    width: 60rem;
+}
+
+.banner .content h1{
+    color: red;
+    font-size: 7rem;
+    font-weight: bolder;
+}
+
+.banner .content h4{
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 0rem 0;
+    line-height: 1.8;
+    font-weight: bolder;
+}
+/*banner css*/
+
+
+/*button css*/
+.button1{
+    width: 150px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 0px solid;
+    background: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button1:hover{
+    background: #404eed;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.button2{
+    width: 150px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 0px solid;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button2:hover{
+    background: #404eed;
+    color: #000000;
+    transition: .3s;
+}
+
+.button3{
+    width: 150px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 0px solid;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button3:hover{
+    background: #ffffff;
+    color: #000000;
+    transition: .3s;
+}
+
+.button4{
+    width: 150px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 0px solid;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button4:hover{
+    background: #808080;
+    color: #000000;
+    transition: .3s;
+}
+/*button css*/
+
+/*material head css*/
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+}
+
+.heading span{
+    background: var(--light-blue);
+    color: #fff;
+    display: inline-block;
+    padding: 1rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+/*material head css*/
+
+
+/*material css*/
+.material .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    padding: 1rem 0rem;
+    padding-bottom: 5rem;
+}
+
+.material .box-container .box{
+    padding: 3rem 2rem;
+    background: #fff;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow2);
+}
+
+.material .box-container .box:hover{
+    box-shadow: 1px 1px 10px 6px var(--light-blue);
+    transition: .3s;
+}
+
+.material .box-container .box img{
+    margin: 1rem 0;
+    height: 15rem;
+
+}
+
+.material .box-container .box h1{
+    font-size: 3.5rem;
+    line-height: 1.8;
+    color: #000;
+}
+
+.material .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #303030;
+    padding-bottom: 1rem 0;
+}
+
+.material .box-container2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    padding: 5rem 22rem;
+}
+
+.material .box-container2 .box{
+    padding: 3rem 2rem;
+    background: #ffffff;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow2);
+}
+
+.material .box-container2 .box:hover{
+    box-shadow: 1px 1px 10px 6px var(--light-blue);
+    transition: .3s;
+}
+
+.material .box-container2 .box img{
+    margin: 1rem 0;
+    height: 15rem;
+
+}
+
+.material .box-container2 .box h1{
+    font-size: 3.5rem;
+    line-height: 1.8;
+    color: #000;
+}
+
+.material .box-container2 .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #303030;
+    padding-bottom: 1rem 0;
+}
+/*material css*/
+
+
+/*header bg css*/
+.bgcolor{
+    background-color: white;
+    transition: .3s;
+}
+.bgcolor .logo{
+    color: #000;
+}
+
+.bgcolor .navbar a{
+    color: #000;
+}
+/*header bg css*/
+
+
+/*footer css*/
+.footer{
+    background: #fff;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 5.8rem;
+}
+
+.footer .box-container .box h1{
+    font-size: 2rem;
+    color: #000;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .heart i{
+    color: #ff0000;
+}
+
+.footer .box-container .box .linkss i{
+    color: blue;
+}
+
+.footer .box-container .box  .link a{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    color: var(--light-blue);
+    margin: .2rem;
+    background: #eee;
+    text-align: center;
+}
+
+.footer .box-container .box .link a:hover{
+    background: var(--light-blue);
+    color: #fff ;
+}
+
+.footer .box-container .box .contact{
+    display: block;
+    font-size: 1.5rem;
+    color: #000;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .contact i{
+    color: var(--light-blue);
+    padding-right: .5rem;
+}
+
+.footer .box-container .box .contact:hover i{
+    padding-right: 2rem;
+    transition: .4s;
+}
+
+.footer .box-container .box a .button3{
+    margin: 3rem 10rem;
+}
+
+.footer .copy{
+    text-align: center;
+    margin: 2rem;
+    padding: 0;
+    padding-top: 2.5rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    border-top: var(--border);
+}
+
+.footer .copy span{
+    color: var(--light-blue);
+}
+
+.footer .copy .copyr{
+    color: aqua;
+}
+/*footer css*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media queires*/
+@media (max-width: 991px)
+{
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    #menu{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+
+    .banner .content h1{
+        font-size: 5rem;
+    }
+
+    .material .box-container{
+        padding: 1rem 5rem;
+    }
+
+    .material .box-container2{
+        padding: 1rem 10rem;
+    }
+
+    .footer{
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 768px)
+{
+    #menu{
+        display: inline-block;
+    }
+
+    .header .search-form{
+        width: 90%;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+
+    .banner .content h1{
+        font-size: 5rem;
+    }
+
+    .banner .content h4{
+        font-size: 1.5rem;
+        padding: 0rem 0;
+        line-height: 1.8;
+    }
+
+    button{
+        width: 100px;
+        padding: 10px 0;
+    }
+
+    .material .box-container{
+        padding: 1rem 12rem;
+    }
+
+    .material .box-container2{
+        padding: 1rem 12rem;
+    }
+
+    .footer{
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 450px)
+{
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 2.5rem;
+    }
+
+    .material .box-container{
+        padding: 1rem 2rem;
+    }
+
+    .material .box-container2{
+        padding: 1rem 2rem;
+    }
+
+    .footer{
+        text-align: center;
+    }
+}
